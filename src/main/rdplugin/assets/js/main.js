@@ -10,9 +10,9 @@ var path = rundeckPage.path();
 console.log(path);
 
 var para = document.createElement("div");
-para.style.backgroundColor = "white";
 para.style.fontSize = "150%";
 para.style.textAlign = "center";
+para.style.marginBottom = "10px";
 
 //element only in Home
 if(!project){
@@ -29,11 +29,8 @@ xkcd.id = "xkcdfield";
 para.appendChild(xkcd);
 
 
-var x = document.getElementsByClassName("navbar");
-var i;
-for (i = 0; i < x.length; i++) {
-    x[i].appendChild(para);
-} 
+var x = jQuery(".main-panel .content").prepend(para);
+
 var pluginName = UI_PLUGIN_EXAMPLES['test-ui'];
 
 
