@@ -35,7 +35,7 @@ var pluginName = UI_PLUGIN_EXAMPLES['test-ui'];
 
 
 demo_init_plugin(pluginName, function () {
-	if(rundeckPage.path() == "menu/home"){
+	if(rundeckPage.path() === "menu/home"){
 		var salute = 'Hello';
 		if(window.Messages){
 			//loaded i18n
@@ -45,7 +45,7 @@ demo_init_plugin(pluginName, function () {
 		jQuery("#testuifield").text(salute);
 	}
 	
-	if(rundeckPage.path() == "menu/jobs"){
+	if(rundeckPage.path() === "menu/jobs"){
 		//on any project page
 		jQuery.ajax({
 			beforeSend: function(xhr){
