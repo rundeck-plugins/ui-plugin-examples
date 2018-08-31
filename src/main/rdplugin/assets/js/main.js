@@ -34,7 +34,7 @@ var i;
 for (i = 0; i < x.length; i++) {
     x[i].appendChild(para);
 } 
-var pluginName = RDPLUGIN['test-ui'];
+var pluginName = UI_PLUGIN_EXAMPLES['test-ui'];
 
 
 demo_init_plugin(pluginName, function () {

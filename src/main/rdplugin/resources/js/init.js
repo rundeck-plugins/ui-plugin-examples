@@ -1,7 +1,11 @@
 //
 jQuery(function () {
-    if (typeof(RDPLUGIN) != 'object') {
-        window.RDPLUGIN = {};
+    if (typeof(UI_PLUGIN_EXAMPLES) !== 'object') {
+        window.UI_PLUGIN_EXAMPLES = {};
     }
-    RDPLUGIN['test-ui'] = "@name@";
+    UI_PLUGIN_EXAMPLES['test-ui'] = "@name@";
+    //place to put init functions
+    if(!UI_PLUGIN_EXAMPLES.toLoad){
+        UI_PLUGIN_EXAMPLES.toLoad = [];
+    }
 });
