@@ -70,12 +70,12 @@ demo_init_plugin(pluginName, function () {
 	    });
 	}
 	//dramatic failed job
-	if(rundeckPage.path() == "execution/show"){
+	if(rundeckPage.path() === "execution/show"){
 		console.log("job status");
 		var status = (jQuery(".exec-status")[0].getAttribute("data-execstate"));
-		if(status == 'failed'){
+		if(status && status.toLowerCase() === 'failed' ){
 			//bs-example-navbar-collapse-1
-			jQuery("#bs-example-navbar-collapse-1").css("backgroundColor", "red");
+			jQuery(".main-panel .mainbar").css("backgroundColor", "red");
 		}
 	}
 });
