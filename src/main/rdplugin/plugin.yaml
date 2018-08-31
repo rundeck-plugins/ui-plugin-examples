@@ -17,7 +17,7 @@ providers:
           styles:
             - css/common.css
           scripts:
-            - js/common.js
             - js/init.js
+            - js/common.js
             - js/main.js
 

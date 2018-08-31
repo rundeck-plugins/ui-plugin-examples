@@ -10,9 +10,9 @@ var path = rundeckPage.path();
 console.log(path);
 
 var para = document.createElement("div");
-para.style.backgroundColor = "white";
 para.style.fontSize = "150%";
 para.style.textAlign = "center";
+para.style.marginBottom = "10px";
 
 //element only in Home
 if(!project){
@@ -29,16 +29,13 @@ xkcd.id = "xkcdfield";
 para.appendChild(xkcd);
 
 
-var x = document.getElementsByClassName("navbar");
-var i;
-for (i = 0; i < x.length; i++) {
-    x[i].appendChild(para);
-} 
-var pluginName = RDPLUGIN['test-ui'];
+var x = jQuery(".main-panel .content").prepend(para);
+
+var pluginName = UI_PLUGIN_EXAMPLES['test-ui'];
 
 
 demo_init_plugin(pluginName, function () {
-	if(rundeckPage.path() == "menu/home"){
+	if(rundeckPage.path() === "menu/home"){
 		var salute = 'Hello';
 		if(window.Messages){
 			//loaded i18n
@@ -48,7 +45,7 @@ demo_init_plugin(pluginName, function () {
 		jQuery("#testuifield").text(salute);
 	}
 	
-	if(rundeckPage.path() == "menu/jobs"){
+	if(rundeckPage.path() === "menu/jobs"){
 		//on any project page
 		jQuery.ajax({
 			beforeSend: function(xhr){
@@ -70,12 +67,12 @@ demo_init_plugin(pluginName, function () {
 	    });
 	}
 	//dramatic failed job
-	if(rundeckPage.path() == "execution/show"){
+	if(rundeckPage.path() === "execution/show"){
 		console.log("job status");
 		var status = (jQuery(".exec-status")[0].getAttribute("data-execstate"));
-		if(status == 'failed'){
+		if(status && status.toLowerCase() === 'failed' ){
 			//bs-example-navbar-collapse-1
-			jQuery("#bs-example-navbar-collapse-1").css("backgroundColor", "red");
+			jQuery(".main-panel .mainbar").css("backgroundColor", "red");
 		}
 	}
 });

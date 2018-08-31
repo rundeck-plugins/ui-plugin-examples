@@ -5,7 +5,7 @@
  * @param callback
  */
 function demo_init_plugin(pluginName, callback) {
-    _plugins.push(function () {
+    UI_PLUGIN_EXAMPLES.toLoad.push(function () {
         //rdpro_setup_ko_extenders();
         demo_load_messages_async(pluginName, url_path(rundeckPage.pluginBasei18nUrl(pluginName)), "i18n/messages.properties")
             .then(callback, callback);
@@ -41,10 +41,9 @@ function url_path(baseUrl) {
         }
     }
 }
-var _plugins = [];
 
 jQuery(document).on('load.rundeck.page', function () {
-       for (var i = _plugins.length - 1; i >= 0; i--) {
-           _plugins[i]();
-       }
-    });
+    for (var i = UI_PLUGIN_EXAMPLES.toLoad.length - 1; i >= 0; i--) {
+        UI_PLUGIN_EXAMPLES.toLoad[i]();
+    }
+});
