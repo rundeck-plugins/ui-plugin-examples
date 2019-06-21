@@ -1,0 +1,25 @@
+name: xkcd-ui
+rundeckPluginVersion: 2.0
+author: Rundeck Dev
+description: Describe your plugin here
+rundeckCompatibilityVersion: 3.x
+targetHostCompatibility: unix
+license: Apache 2.0
+tags:
+    - script
+    - UI
+date: 2019-06-14T20:45:04.155Z
+version: 1.0.0
+providers:
+    - name: xkcd-ui
+      service: UI
+      plugin-type: ui
+      title: XKCD UI
+      description: Rundeck UI test
+      ui:
+        - pages: '*'
+          scripts:
+            - js/xkcd-init.js
+            - js/main.js
+          styles:
+            - css/ui-example-styles.css

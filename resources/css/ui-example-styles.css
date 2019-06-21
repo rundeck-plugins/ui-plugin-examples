@@ -1,0 +1,30 @@
+body {
+    font-variant:small-caps;
+	font-family:Lucida,Helvetica,sans-serif;
+	font-weight:500;
+}
+/* line 1, paper/_typography.scss */
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, p, .navbar, .brand, a, .td-name, td {
+	font-variant:small-caps;
+	font-family:Lucida,Helvetica,sans-serif;
+	font-weight:500;
+	text-decoration: none;
+}
+
+.sidebar .logo a.home {
+  font-family:Lucida,Helvetica,sans-serif;
+}
+
+.mainbar {
+	background-image: url('../icon.png');
+  text-transform: uppercase;
+  color: #ffffff;
+  padding-left: 80px;
+
+  background-size: 80px;
+  background-repeat: no-repeat;
+  width: 100%;
+  display: block;
+  background-position-y: 10px;
+  background-position-x: 20px;
+}
