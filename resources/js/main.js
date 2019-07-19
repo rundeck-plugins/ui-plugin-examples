@@ -1,7 +1,6 @@
 
 function initXKCD() {
 	var project = rundeckPage.project();
-	var path = rundeckPage.path();
 	var para = document.createElement("div");
 	
 	para.style.fontSize = "150%";
@@ -14,7 +13,7 @@ function initXKCD() {
 
 	var x = jQuery(".main-panel .content").prepend(para);
 
-	if(rundeckPage.path() === "menu/jobs"){
+	if(rundeckPage.path() === "menu/projectHome"){
 		//on any project page
 		jQuery.ajax({
 			beforeSend: function(xhr){
