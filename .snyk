@@ -1,0 +1,28 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.25.0
+
+# Repository Configuration
+# This is a configuration-only repository for Rundeck UI plugin examples
+# Contains: YAML configurations, static CSS/JS resources, documentation
+
+# Repository Type: Configuration-only
+# - No runtime dependencies
+# - No executable application code
+# - Static resources for UI plugin demonstrations
+# - Configuration files and documentation
+
+# Security Posture
+# This repository contains only:
+# 1. Static configuration files (YAML, JSON)
+# 2. Client-side resources (CSS, vanilla JavaScript)
+# 3. Documentation and build scripts
+# 4. No server-side executable code
+# 5. No package dependencies with known vulnerabilities
+
+# Patch and ignore rules
+patch: {}
+ignore: {}
+
+# Language settings for this repository
+language-settings:
+  javascript: {}

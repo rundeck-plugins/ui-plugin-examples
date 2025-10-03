@@ -1,0 +1,33 @@
+{
+  "name": "rundeck-ui-plugin-examples",
+  "version": "1.0.0",
+  "description": "Configuration-only repository containing Rundeck UI plugin examples with static resources and configurations",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rundeck-plugins/ui-plugin-examples.git"
+  },
+  "keywords": [
+    "rundeck",
+    "ui",
+    "plugin",
+    "configuration",
+    "examples"
+  ],
+  "author": "Rundeck Dev",
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Configuration-only repository - no executable tests\" && exit 0",
+    "security-scan": "echo \"Security scanning enabled for configuration files\" && exit 0"
+  },
+  "config": {
+    "repository-type": "configuration-only",
+    "contains-executable-code": false,
+    "security-scanning": "enabled"
+  }
+}
