@@ -11,7 +11,7 @@ function initXKCD() {
 	xkcd.id = "xkcdfield";
 	para.appendChild(xkcd);
 
-	var x = jQuery(".main-panel .content").prepend(para);
+	var x = jQuery(".content").prepend(para);
 
 	if(rundeckPage.path() === "menu/projectHome"){
 		//on any project page
