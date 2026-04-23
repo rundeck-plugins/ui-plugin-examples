@@ -1,5 +1,5 @@
 #!/bin/bash
-TODAY=2177
+TODAY=$(date +%Y) # Pick up the user's year automatically
 START=$TODAY-365
 echo "{ \"list\": ["
  
